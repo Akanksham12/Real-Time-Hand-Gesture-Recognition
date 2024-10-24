@@ -1,43 +1,42 @@
-# Real-Time-Hand-Gesture-Recognition
-This project implements a real-time hand gesture recognition system using MediaPipe and TensorFlow. It uses the MediaPipe library to detect hand landmarks and a pre-trained TensorFlow model to recognize hand gestures.
+# Gesture-Based Game using OpenCV, MediaPipe, and Pygame
 
-## Installation
+This project is a gesture-controlled game that uses real-time hand tracking to move a player within a Pygame window. The player must avoid obstacles that fall from the top of the screen by using hand gestures captured through the webcam. The game utilizes computer vision through OpenCV and MediaPipe to track hand movements and gestures.
 
-Before running the code, make sure to install the required libraries. Y
-```bash
-pip install opencv-python numpy mediapipe tensorflow
-```
+## Key Features
 
-## Usage
+- **Gesture Recognition**: Hand gestures are tracked using MediaPipe's hand detection. The player's movements are controlled based on the position of the index finger.
+- **Real-time Webcam Input**: The game uses OpenCV to capture live video from the webcam.
+- **Game Mechanics**: Pygame handles the game interface, rendering the player and obstacles, detecting collisions, and displaying a "Game Over" screen with a restart option.
+- **Obstacle Avoidance**: The player must avoid falling obstacles by moving left or right through gestures.
 
-1. **Clone the Repository:**
+## Technologies Used
+
+- **OpenCV**: For real-time video capture and processing.
+- **MediaPipe**: For hand tracking and gesture recognition.
+- **Pygame**: For rendering the game, handling collisions, and controlling game logic.
+- **NumPy**: For generating random obstacle positions and handling numeric operations.
+- **Python**: The programming language used to tie everything together.
+
+## How to Run the Project
+
+### Prerequisites
+
+Make sure you have the following installed:
+- Python 3.x
+- OpenCV (`pip install opencv-python`)
+- MediaPipe (`pip install mediapipe`)
+- Pygame (`pip install pygame`)
+- NumPy (`pip install numpy`)
+
+### Running the Game
+
+1. Clone this repository or download the source code.
+   
    ```bash
-   git clone https://github.com/your-username/hand-gesture-recognition.git
-   cd hand-gesture-recognition
-   ```
-
-2. **Install Dependencies:**
-   Install the required dependencies using the command mentioned above.
-
-3. **Download Model and Names:**
-   Download the pre-trained model file (`mp_hand_gesture`) and class names file (`gesture.names`). Place them in the project directory.
-
-4. **Run the Code:**
-   ```bash
-   python hand_gesture_recognition.py
-   ```
-   This will initialize the webcam and start recognizing hand gestures.
-
-## File Descriptions
-
-- `hand_gesture_recognition.py`: Main Python script for hand gesture recognition.
-- `mp_hand_gesture`: Pre-trained TensorFlow model for gesture recognition.
-- `gesture.names`: Class names file.
-
-## Libraries Used
-
-- OpenCV (cv2): For image and video processing.
-- NumPy: For numerical operations.
-- MediaPipe: For hand landmark detection.
-- TensorFlow: For deep learning-based hand gesture recognition.
-
+   git clone https://github.com/your-username/gesture-game.git
+   cd gesture-game
+   
+### Game Controls
+Move Left: Move your hand's index finger to the left third of the screen.
+Move Right: Move your hand's index finger to the right third of the screen.
+Restart Game: Click the "Restart" button on the "Game Over" screen with the mouse.
